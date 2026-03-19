@@ -1,0 +1,937 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4" pages="6">
+  <diagram name="1. Subir Documento" id="FxWyEpLxjyQvTKjn8uyo">
+    <mxGraphModel dx="1025" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="📤  Proceso 1: Carga de documentos" vertex="1">
+          <mxGeometry height="40" width="420" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=1;strokeColor=#e8d5b7;fillColor=#fff8e1;align=left;verticalAlign=middle;rounded=1;fontSize=11;fontColor=#5d4037;" value="⚠️  NOTA: Una API BS puede llamar a otra API BS · Una API UX puede llamar a varias APIs BS en un endpoint" vertex="1">
+          <mxGeometry height="30" width="820" x="30" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="front" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=13;fontColor=#0d47a1;arcSize=12;shadow=1;" value="🖥️&lt;br&gt;&lt;b&gt;Front&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="40" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ux" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffa726;strokeColor=#e65100;fontSize=13;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API UX&lt;/b&gt;&lt;br&gt;Credit Evaluation" vertex="1">
+          <mxGeometry height="80" width="200" x="240" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="560" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir-ep" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; creditEvaluationId:&quot;JB0000001&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; document:{&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; stage:input&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="165" x="607.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="260" x="560" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="1040" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1" vertex="1">
+          <mxGeometry height="50" width="220" x="1040" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2" vertex="1">
+          <mxGeometry height="50" width="220" x="1040" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3" vertex="1">
+          <mxGeometry height="50" width="220" x="1040" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1010" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="a-front-ux" edge="1" parent="1" source="front" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;strokeWidth=2;" target="ux" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-ux-docdir" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2e7d32;fillColor=#2e7d32;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;" target="docdir" value="1️⃣ datos para guardar el archivo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="290" />
+              <mxPoint x="690" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-docdir-ux" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="ux" value="2️⃣ devuelve SAS token para cargar archivo">
+          <mxGeometry relative="1" x="0.0007" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="690" y="320" />
+              <mxPoint x="390" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-docdir-blob" edge="1" parent="1" source="front" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="blob-in" value="cliente sube archivo con SAS">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="730" />
+              <mxPoint x="900" y="730" />
+              <mxPoint x="900" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-ux-proc" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;" target="procorder" value="3️⃣ datos para guardar en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="480" />
+              <mxPoint x="690" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-proc-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s49ELKlSVa9WjJ8tH8Sy-2" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2e7d32;fillColor=#2e7d32;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="blob-in" value="crea un espacio en blanco en blob storage">
+          <mxGeometry relative="1" x="0.0324" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="880" y="250" />
+              <mxPoint x="880" y="260" />
+              <mxPoint x="970" y="260" />
+              <mxPoint x="970" y="262" />
+            </Array>
+            <mxPoint x="780" y="220" as="sourcePoint" />
+            <mxPoint x="1000" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1MySu_0CiD4hwkSPSa_t-1" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;exitX=0.083;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" value="4️⃣  devuelve SAS token para cargar archivo">
+          <mxGeometry relative="1" x="0.0007" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="257" y="490" />
+              <mxPoint x="120" y="490" />
+            </Array>
+            <mxPoint x="470" y="460" as="sourcePoint" />
+            <mxPoint x="120" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34fkHK88K3HQEytLrb4I-1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Muchos procesos, puede ocasionar incoherencias.&lt;/div&gt;&lt;div&gt;- Definir el proceso de liminacion, update y si pondriamos estados en los documentos para esa simulacion de eliminacion&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="300" x="70" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="g2SZsHPxAElHCCd5KvqT-1" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-wrap-mode: wrap;&quot;&gt;IdSolicitud/&lt;/span&gt;nombrearchivo1.pdf&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-wrap-mode: wrap;&quot;&gt;IdSolicitud/&lt;/span&gt;nombrearchivo2.pdf&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-wrap-mode: wrap;&quot;&gt;IdSolicitud/&lt;/span&gt;nombrearchivo3.pdf&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1290" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="B8Txpdm5-kQX2iiRJN47-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;POST /document-directories/register&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;&lt;b&gt;header: employeeId=T6172&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="560" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B8Txpdm5-kQX2iiRJN47-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;POST /processing-orders/{customerOfferId}/correspondence-and-documents/initiate&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="410" x="470" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="B8Txpdm5-kQX2iiRJN47-4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#4527a0;fontStyle=1;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;POST /credit-evaluations/documents/{creditEvaluationId}/upload&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="380" x="110" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="B8Txpdm5-kQX2iiRJN47-5" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="490" y="330" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Document: {&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; name:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; stage:input,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; size: &quot;10000&quot;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; status: active&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; Stage:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" id="TXY_rGbblwj1X9SuF5Yr-1">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="150" x="600" y="640" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="5wD1O5cLqNJkX0Ak7arl-3" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; document:{&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; size&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; stage:input,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; status: Active&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="96" width="130" x="155" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="5wD1O5cLqNJkX0Ak7arl-4" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="120" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Bedl7-siqzHcOqlyeNLM-1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Agregar peso de cada archivo&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="190" x="125" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="-CZtfSM4CBHOsZwQfEVJ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="header: user-code&amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="110" x="625" y="620" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Actualizar Documento" id="guwjxCFCvKciRBk6_BNG">
+    <mxGraphModel dx="1464" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="✏️  Proceso 2: Actualizar Documento" vertex="1">
+          <mxGeometry height="40" width="400" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#4527a0;fontStyle=1;" value="PUT /credit-evaluations/documents/{creditEvaluationId}/replace" vertex="1">
+          <mxGeometry height="24" width="370" x="120" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="front" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=13;fontColor=#0d47a1;arcSize=12;shadow=1;" value="🖥️&lt;br&gt;&lt;b&gt;Front&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="40" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ux" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffa726;strokeColor=#e65100;fontSize=13;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API UX&lt;/b&gt;&lt;br&gt;Credit Evaluation" vertex="1">
+          <mxGeometry height="80" width="200" x="240" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="560" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="260" x="560" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder-ep" parent="1" style="text;html=1;strokeColor=none;fillColor=#D0D0D0;align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;PATCH /processing-orders/{customerOfferId}/correspondence-and-documents/{correspondenceanddocumentId}/update&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="20" width="710" x="365" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="1030" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1" vertex="1">
+          <mxGeometry height="50" width="220" x="1030" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2" vertex="1">
+          <mxGeometry height="50" width="220" x="1030" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3" vertex="1">
+          <mxGeometry height="50" width="220" x="1030" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1010" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="front" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;strokeWidth=2;" target="ux" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2e7d32;fillColor=#2e7d32;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;" target="docdir" value="1️⃣ datos para actualizar archivo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="290" />
+              <mxPoint x="690" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="ux" value="2️⃣ devuelve SAS token para cargar archivo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="320" />
+              <mxPoint x="390" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-blob" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="blob-in" value="crea nueva version del archivo en blanco ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;" target="procorder" value="3️⃣ datos para actualizar en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="450" />
+              <mxPoint x="690" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="actualiza en BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left; color: rgb(27, 94, 32);&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;Entrada de datos:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; creditEvaluationId:&quot;JB0000001&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; &amp;nbsp; document:{&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; &amp;nbsp; name:creditoPyme.pdf,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; &amp;nbsp; stage:input&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;forced-color-adjust: none; background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; creditEvaluationId:&quot;JB0000001&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:{ type:14,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; stage:1&amp;nbsp;&lt;/font&gt;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" id="l2oudIaaBAUTRQrHOsCk-1">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="90" width="160" x="600" y="110" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="_-nXJPvSQo07yLJlL2kS-1" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="front" value="4️⃣  devuelve SAS token para cargar archivo">
+          <mxGeometry relative="1" x="0.0007" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="290" y="557" />
+              <mxPoint x="100" y="557" />
+            </Array>
+            <mxPoint x="377" y="500" as="sourcePoint" />
+            <mxPoint x="240" y="507" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rKW0YQ0Dt7f0MFKVO7d--1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Muchos procesos, puede ocasionar incoherencias.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="70" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rKW0YQ0Dt7f0MFKVO7d--2" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Se va a guardar el archivo en la misma ubicacion que el anterior, solo que ahora e suna nueva version.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="1000" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wg4xI1Aoxfg2svpoLG4E-2" parent="1" style="whiteSpace=wrap;html=1;" value="/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="300" x="1280" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="gcF1SSE_qwmJWH7hPRQv-3" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; document:{&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId: 1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; status: active/inactive&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; stage:1&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="130" x="190" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="gcF1SSE_qwmJWH7hPRQv-4" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="555" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="dsmR1qP_o0KUVwkYLell-1" parent="1" style="text;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="105" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="1cArm_CQxpqJxVORUVjK-6" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 14px;&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;PUT /document-directories/{documentDirectoryId}/update&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;header:&amp;nbsp;&lt;span style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134));&quot;&gt;employeeId=T6172&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="420" x="470" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uegoy6Gu47kjtLTelbSa-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="header: user-code&amp;nbsp;" vertex="1">
+          <mxGeometry height="20" width="110" x="635" y="630" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Document: {&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; name:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; stage:input,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; size: &quot;10000&quot;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; status: active&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; Stage:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" id="uw7q_gchJhCdKveoTy4L-1">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="80" width="150" x="635" y="650" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Descargar Documentos" id="vvEgmgBVUBe6GRFv3Gnt">
+    <mxGraphModel dx="1206" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="📥  Proceso 3: Descargar Documentos&lt;div&gt;Devuelve una lista de tokens sas&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="420" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=left;verticalAlign=middle;fontSize=12;fontColor=#4527a0;fontStyle=1;" value="GET /credit-evaluations/documents/{creditEvaluationId}" vertex="1">
+          <mxGeometry height="24" width="330" x="170" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="front" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=13;fontColor=#0d47a1;arcSize=12;shadow=1;" value="🖥️&lt;br&gt;&lt;b&gt;Front&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="40" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ux" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffa726;strokeColor=#e65100;fontSize=13;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API UX&lt;/b&gt;&lt;br&gt;Credit Evaluation" vertex="1">
+          <mxGeometry height="80" width="200" x="240" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="560" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir-ep" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;fontStyle=1;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;GET /document-directories/{documentDirectoryId}retrieve?&amp;amp;documentStage:input&lt;/font&gt;" vertex="1">
+          <mxGeometry height="25" width="630" x="430" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="260" x="570" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder-ep" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#1b5e20;fontStyle=1;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;GET /processing-orders/{customerOfferId}/correspondence-and-documents/retrieve?documentStage:input&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="680" x="300" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="970" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1" vertex="1">
+          <mxGeometry height="50" width="220" x="970" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2" vertex="1">
+          <mxGeometry height="50" width="220" x="970" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3" vertex="1">
+          <mxGeometry height="50" width="220" x="970" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1010" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="front" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;strokeWidth=2;" target="ux" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2e7d32;fillColor=#2e7d32;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" target="docdir" value="1️⃣ solicitar archivos">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;" target="ux" value="2️⃣ devuelve lista de SAS tokens para descargar">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="320" />
+              <mxPoint x="340" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-blob" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565c0;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="blob-in" value="lee archivos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;" target="procorder" value="3️⃣ solicita datos de archivos en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="450" />
+              <mxPoint x="690" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="consulta BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="beCRPKAVCJI1UIevY6e0-1" edge="1" parent="1" source="ux" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;exitX=0.389;exitY=0.974;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="front" value="4️⃣  devuelve SAS token para descargar archivos">
+          <mxGeometry relative="1" x="0.0007" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="320" y="428" />
+              <mxPoint x="320" y="550" />
+              <mxPoint x="100" y="550" />
+            </Array>
+            <mxPoint x="470" y="510" as="sourcePoint" />
+            <mxPoint x="280" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSlL7llgXvEy7qPyzlyS-1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Llamada a bd innecesaria&lt;/div&gt;&lt;div&gt;- como vamos a llamar a los archivos, porque si llamamos todos los asociados a la solicitud, puede que devuelva archivos que han sido eliminados anteriormente&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="320" x="60" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FQi1gqKZQ5p5Y-D7P3F2-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentList[&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; directoryId:1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; name: boletas1.pdf&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; stage: input&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; size: &quot;10000&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; status: Activo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; createDate:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;2026-06-20 10:42:59&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; ]&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="205" x="587.5" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="bjDT2acllCBe0_PQ74xy-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;documentList[ {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}]&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="575" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="bjDT2acllCBe0_PQ74xy-2" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;documentList[ {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp; archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp; expirationDate: 2026-06-20 10:42:59,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; directoryId:1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; name: boletas1.pdf&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; stage: input&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; size: &quot;10000&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; status: Activo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; createDate:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;2026-06-20 10:42:59&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}]&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="250" x="30" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="Her98GAJWZdOJFZRE6fa-1" parent="1" style="text;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FFFFFF);" value="&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&amp;nbsp;por default, listamos -&amp;gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;status: active&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: light-dark(rgb(236, 236, 236), rgb(34, 34, 34)); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="185" x="375" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="FytlZpattn3aHWIrBHEJ-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;header: userId=T1273&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="625" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. Normalización (Agente IA)" id="9ihekh8CyjNmKVhp71lW">
+    <mxGraphModel dx="1025" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="🤖  Proceso 4: Normalización de Documentos" vertex="1">
+          <mxGeometry height="40" width="900" x="30" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#4527a0;fontStyle=1;" value="&amp;nbsp;·   UX inicia con: /credit-evaluations/{creditEvaluationId}" vertex="1">
+          <mxGeometry height="24" width="300" x="30" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="foundry" parent="1" style="swimlane;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=14;fontStyle=1;fontColor=#0d47a1;arcSize=4;startSize=30;" value="&lt;b&gt;Azure Foundry&lt;/b&gt;" vertex="1">
+          <mxGeometry height="180" width="270" x="90" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="supervisor" parent="foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="🧠&lt;br&gt;&lt;b&gt;Agente Supervisor&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="docservice" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#388e3c;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Service&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="500" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="100" width="255" x="970" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="982.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="1490" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1" vertex="1">
+          <mxGeometry height="50" width="230" x="1490" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e7d32;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2  ✅ escribe aquí" vertex="1">
+          <mxGeometry height="50" width="230" x="1490" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3" vertex="1">
+          <mxGeometry height="50" width="230" x="1490" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-meta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Metadata digitization — stage 4" vertex="1">
+          <mxGeometry height="50" width="230" x="1490" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1360" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="supervisor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1b5e20;fillColor=#1b5e20;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="docservice" value="1️⃣ ordena normalizar archivos a PDF">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;exitX=1;exitY=0.136;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="procorder" value="2️⃣ solicita datos de archivos en BD">
+          <mxGeometry relative="1" x="-0.0032" y="80" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="760" y="361" />
+              <mxPoint x="800" y="361" />
+              <mxPoint x="800" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF8000;fillColor=#00897b;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#004d40;fontStyle=1;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="docdir" value="3️⃣ solicitar archivos (1 SAS por petición — repite N veces)">
+          <mxGeometry relative="1" x="0.2934" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1090" y="420" />
+              <mxPoint x="1090" y="430" />
+              <mxPoint x="1098" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="docservice" value="4️⃣ SAS token descarga">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1034" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-read" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF8000;fillColor=#1565c0;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;dashed=1;" target="blob-in" value="lee de stage 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#e53935;fillColor=#e53935;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#b71c1c;fontStyle=1;strokeWidth=2;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="docdir" value="5️⃣ solicitas token sas para guardar archivo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#43a047;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;dashed=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="docservice" value="6️⃣ SAS token carga">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="600" />
+            </Array>
+            <mxPoint x="950" y="580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-write" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#2e7d32;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;strokeWidth=2;exitX=0.629;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="blob-pre" value="escribe archivo en blanco dentro de blob">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#5e35b1;fillColor=#5e35b1;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#311b92;fontStyle=1;strokeWidth=2;exitX=0.227;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;" value="7️⃣ datos para guardar en BD">
+          <mxGeometry relative="1" x="0.1172" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="559" y="740" />
+              <mxPoint x="990" y="740" />
+            </Array>
+            <mxPoint x="559.0200000000002" y="460" as="sourcePoint" />
+            <mxPoint x="990" y="734" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="retrna datos de BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8XBq1Ye3DDMhBaKFzCwu-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(69, 39, 160); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;POST /document-services/preprocessing-documents/{requestId}/initate&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="410" x="400" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="SlximmPeVymD-x19Neh0-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="982.5" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="SlximmPeVymD-x19Neh0-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;POST /processing-orders/{customerOfferId}/correspondence-and-documents/initiate&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="370" x="780" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="SlximmPeVymD-x19Neh0-3" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b&gt;GET /processing-orders/{customerOfferId}/correspondence-and-documents/retrieve?documentStage:input&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="610" x="780" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="PRh7vwsIRCKLVXcnUTrt-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1120" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="PRh7vwsIRCKLVXcnUTrt-2" edge="1" parent="1" source="SlximmPeVymD-x19Neh0-1" style="rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="PRh7vwsIRCKLVXcnUTrt-1" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="780" as="sourcePoint" />
+            <mxPoint x="1167.5" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PRh7vwsIRCKLVXcnUTrt-3" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;POST /document-directories/register&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;employeeId=T6172 — stage:2&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="370" x="1180" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="PRh7vwsIRCKLVXcnUTrt-4" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;GET /document-directories/{documentDirectoryId}/retrieve?creditEvaluationId=6172&amp;amp;documentStage:1&amp;amp;&lt;/span&gt;&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b&gt;documentName=boleta5.pdf&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="20" width="720" x="1180" y="390" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; Stage:postProcessed,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; Stage:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" id="YW8xfPaHTNQ8Fiq06r7R-1">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="180" x="920" y="810" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="vVCtbXxFB9EhrjCdMnCl-1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTAS:&lt;div&gt;- Llamada a bd innecesaria&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="50" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="CXSzvnTEiy3W-zfhL4eS-1" parent="1" style="whiteSpace=wrap;html=1;" value="/IdSolicitud&lt;div&gt;[&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); text-wrap-mode: nowrap;&quot;&gt;nombrearchivo.pdf&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(27, 94, 32); text-wrap-mode: nowrap;&quot;&gt;nombrearchivo.pdf&lt;/span&gt;&lt;/div&gt;&lt;div&gt;]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1760" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="CXSzvnTEiy3W-zfhL4eS-2" parent="1" style="whiteSpace=wrap;html=1;" value="/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;/IdSolicitud/&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(27, 94, 32), rgb(130, 188, 134)); text-wrap-mode: nowrap;&quot;&gt;documentDirectoryId/nombrearchivo.pdf&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="300" x="1760" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="CXSzvnTEiy3W-zfhL4eS-3" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;documentDirectoryId&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="140" x="1460" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="alKnbYxejW-hnGzsnFyy-1" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" x="0.2362" y="-50" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1098" y="390" />
+              <mxPoint x="780" y="390" />
+              <mxPoint x="780" y="400" />
+            </Array>
+            <mxPoint x="920" y="391" as="sourcePoint" />
+            <mxPoint x="760" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usig0NKb_wxn939GIUEQ-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;expirationDate: 2026-06-20 10:42:59&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="710" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="usig0NKb_wxn939GIUEQ-2" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; url:&amp;nbsp;https://cuenta.blob.core.windows.net/contenedor/&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;archivo.txt?sv=2022-11-02&amp;amp;ss=b&amp;amp;srt=o&amp;amp;st=...&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;expirationDate: 2026-06-20 10:42:59&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="760" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="usig0NKb_wxn939GIUEQ-3" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1b5e20;fillColor=#1b5e20;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="supervisor" value="Devuelve una lista con los archivos normalizados">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="440" />
+              <mxPoint x="450" y="520" />
+              <mxPoint x="260" y="520" />
+            </Array>
+            <mxPoint x="360" y="520" as="sourcePoint" />
+            <mxPoint x="560" y="535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usig0NKb_wxn939GIUEQ-4" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; message: El proceso se ha completado correctamente&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; documents: [&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; {document: boleta1.pdf&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; },&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;{document: boleta2.pdf&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; }&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; ]&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="250" x="280" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="pNb0WOwQqZtanbrSdDdP-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; creditEvaluationId:&quot;JB0000001&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; document:{ type:14,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; stage:1&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="165" x="1310" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="I7EnMqwkPp68hPGUjLzV-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; userId:&quot;0S76548&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; documents: [&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; {&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp;directoryId:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp;name:boleta1.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp; &lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;},&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: rgb(255, 0, 0);&quot;&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; {&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; &amp;nbsp;directoryId:2,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; &amp;nbsp;name:boleta2.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="189" width="165" x="450" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="iJU7oOsH-qqyXkJDRcOR-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentList[&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; directoryId:1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; name: boletas1.pdf&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; stage: input&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; size: &quot;10000&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; status: Activo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; createDate:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;2026-06-20 10:42:59&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; ]&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="205" x="850" y="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="5. Detección de Fraude" id="aHRwCPfUyD2aaSyXFRNl">
+    <mxGraphModel dx="820" dy="1270" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="🔍  Proceso 5: Detección de Fraude" vertex="1">
+          <mxGeometry height="40" width="900" x="30" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#4527a0;fontStyle=1;" value="&amp;nbsp;·   UX inicia con: /credit-evaluations/{creditEvaluationId}" vertex="1">
+          <mxGeometry height="24" width="1000" x="30" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="foundry" parent="1" style="swimlane;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=14;fontStyle=1;fontColor=#0d47a1;arcSize=4;startSize=30;" value="&lt;b&gt;Azure Foundry&lt;/b&gt;" vertex="1">
+          <mxGeometry height="230" width="370" x="30" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="supervisor" parent="foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="🧠&lt;br&gt;&lt;b&gt;Agente Supervisor&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="150" x="20" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="agente-fraude" parent="foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b71c1c;strokeColor=#7f0000;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="🕵️&lt;br&gt;&lt;b&gt;Agente Fraude&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="150" x="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="docservice" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#388e3c;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Service&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="600" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="1010" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="1020" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="1420" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b71c1c;strokeColor=#7f0000;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1  ← lee aquí" vertex="1">
+          <mxGeometry height="50" width="230" x="1420" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2" vertex="1">
+          <mxGeometry height="50" width="230" x="1420" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3&amp;nbsp;&amp;nbsp;✅ escribe" vertex="1">
+          <mxGeometry height="50" width="230" x="1420" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-meta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b71c1c;strokeColor=#7f0000;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Metadata digitization — stage 4" vertex="1">
+          <mxGeometry height="50" width="230" x="1420" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1470" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="agente-fraude" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b71c1c;fillColor=#b71c1c;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#7f0000;fontStyle=1;strokeWidth=2;" target="docservice" value="1️⃣ solicita metadata de archivos del analista">
+          <mxGeometry relative="1" x="0.0638" y="28" as="geometry">
+            <mxPoint x="-20" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="procorder" value="2️⃣ solicita datos en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="785" y="90" />
+              <mxPoint x="795" y="90" />
+              <mxPoint x="795" y="85" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF8000;fillColor=#00897b;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#004d40;fontStyle=1;strokeWidth=2;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="docdir" value="3️⃣ solicitar archivos (1 SAS por petición — N veces)">
+          <mxGeometry relative="1" x="0.3537" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="880" y="180" />
+              <mxPoint x="880" y="190" />
+              <mxPoint x="1075" y="190" />
+            </Array>
+            <mxPoint x="529.9985714285715" y="210" as="sourcePoint" />
+            <mxPoint x="540" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;exitX=-0.006;exitY=0.131;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="docservice" value="4️⃣ SAS token descarga">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="290" />
+              <mxPoint x="910" y="260" />
+              <mxPoint x="785" y="260" />
+            </Array>
+            <mxPoint x="599.9985714285715" y="480" as="sourcePoint" />
+            <mxPoint x="599.9985714285715" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-read" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF8000;fillColor=#b71c1c;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#7f0000;strokeWidth=2;dashed=1;exitX=0.994;exitY=0.122;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="blob-in" value="lee metadata de stage 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1370" y="290" />
+              <mxPoint x="1370" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#e53935;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#b71c1c;fontStyle=1;strokeWidth=2;exitX=0.616;exitY=1.051;exitDx=0;exitDy=0;exitPerimeter=0;" target="docdir" value="5️⃣ datos para guardar resultado fraude">
+          <mxGeometry relative="1" x="0.3333" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="750" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#43a047;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;dashed=1;exitX=0.015;exitY=0.865;exitDx=0;exitDy=0;exitPerimeter=0;" target="docservice" value="6️⃣ SAS token carga">
+          <mxGeometry relative="1" x="0.259" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="990" y="349" />
+              <mxPoint x="690" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-write" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#b71c1c;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#7f0000;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="blob-post" value="guarda metadata fraude en stage 4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1300" y="340" />
+              <mxPoint x="1300" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#5e35b1;fillColor=#5e35b1;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#311b92;fontStyle=1;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.084;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;" target="ys3G6trgekc_r5dob7i5-1" value="7️⃣ datos para guardar en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="612" y="340" />
+              <mxPoint x="610" y="340" />
+              <mxPoint x="610" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ys3G6trgekc_r5dob7i5-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="960" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="ys3G6trgekc_r5dob7i5-2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1070" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="ys3G6trgekc_r5dob7i5-3" edge="1" parent="1" source="ys3G6trgekc_r5dob7i5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="ys3G6trgekc_r5dob7i5-2" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1075" y="610" />
+              <mxPoint x="1080" y="610" />
+              <mxPoint x="1080" y="620" />
+              <mxPoint x="1125" y="620" />
+            </Array>
+            <mxPoint x="1130" y="750" as="sourcePoint" />
+            <mxPoint x="1350" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sYcUlfXaJoyzo2N7yl0-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(69, 39, 160); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;POST /document-services/fraud-detection-documents/{requestId}/execute&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="420" x="540" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="RIvrXrJrgN9B0sdjKVjx-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;POST /document-directories/register?employeeId=T6172 — stage:3&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="400" x="1110" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="RIvrXrJrgN9B0sdjKVjx-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;GET /document-directories/{documentDirectoryId}/retrieve?creditEvaluationId=T6172&amp;amp;documentStage:1&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="560" x="1110" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tfvsbpjpzEg7If6iJzBP-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b&gt;GET /processing-orders/{customerOfferId}/correspondence-and-documents/retrieve?documentStage:1&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="560" x="820" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="C0aVD79YIv-XsQR8RyE--1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;POST /processing-orders/{customerOfferId}/correspondence-and-documents/initiate&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="370" x="730" y="570" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; Stage:3,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; Stage:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" id="mULCE70avkbuyVUM7Vzu-1">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="180" x="860" y="600" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="73vGlUzEogiekXjPHaFM-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; message: La operación se realizó con éxito&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; documentInformation: [&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;name: boleta1.pdf,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;contentType: application/pdf,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;version:1.7,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;createdAt: 2024-01-01T10:00:00Z,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;modifiedAt: 2024-01-01T10:00:00Z,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;creatorTool: Microsoft Word,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;producer: Adobe pdf Library,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;application:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;Microsoft Word,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;lastAuthor: Juan Perez,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;userComment: Screenshot&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; },&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: rgb(183, 28, 28);&quot;&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;name: boleta2.pdf,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;contentType: application/pdf,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;version:1.7,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;createdAt: 2024-01-01T10:00:00Z,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;modifiedAt: 2024-01-01T10:00:00Z,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;creatorTool: Microsoft Word,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;producer: Adobe pdf Library,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;application:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;Microsoft Word,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;lastAuthor: Juan Perez,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;userComment: Screenshot&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;.&lt;/font&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; ]&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="410" width="250" x="300" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="73vGlUzEogiekXjPHaFM-2" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b71c1c;fillColor=#b71c1c;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#7f0000;fontStyle=1;strokeWidth=2;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="agente-fraude" value="Respuesta del proceso de fraude">
+          <mxGeometry relative="1" x="0.0638" y="28" as="geometry">
+            <mxPoint x="-20" y="8" as="offset" />
+            <mxPoint x="460" y="215" as="sourcePoint" />
+            <mxPoint x="680" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2usDzf-uOUedsmfxPtp4-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; userId:&quot;0S76548&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; documents: [&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; {&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp;directoryId:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &amp;nbsp;name:boleta1.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;font&gt;&amp;nbsp; &lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;},&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: rgb(255, 0, 0);&quot;&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; {&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; &amp;nbsp;directoryId:2,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp; &amp;nbsp;name:boleta2.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="189" width="165" x="590" y="-49.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="6. Digitalización OCR" id="y1ZQF7ysxhTUlNs-4mMA">
+    <mxGraphModel dx="1079" dy="487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=22;fontColor=#1a237e;" value="📝  Proceso 6: Digitalización OCR" vertex="1">
+          <mxGeometry height="40" width="430" x="30" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#4527a0;fontStyle=1;" value="·   UX inicia con: /credit-evaluations/{creditEvaluationId}" vertex="1">
+          <mxGeometry height="24" width="1000" x="30" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="foundry" parent="1" style="swimlane;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=14;fontStyle=1;fontColor=#0d47a1;arcSize=4;startSize=30;" value="&lt;b&gt;Azure Foundry&lt;/b&gt;" vertex="1">
+          <mxGeometry height="230" width="370" x="30" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="supervisor" parent="foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="🧠&lt;br&gt;&lt;b&gt;Agente Supervisor&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="150" x="20" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="agente-ocr" parent="foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f57f17;strokeColor=#e65100;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="🔎&lt;br&gt;&lt;b&gt;Agente OCR&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="150" x="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="docservice" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#388e3c;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Service&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="570" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="docdir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCC00;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Document Directory&lt;br&gt;Centralized Evaluation" vertex="1">
+          <mxGeometry height="80" width="260" x="1000" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="procorder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="965" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontSize=13;fontColor=#fff;arcSize=6;shadow=1;" value="&lt;b&gt;BLOB STORAGE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="1400" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Input — stage 1" vertex="1">
+          <mxGeometry height="50" width="230" x="1400" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f57f17;strokeColor=#e65100;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Pre-processed — stage 2  ← lee aquí" vertex="1">
+          <mxGeometry height="50" width="230" x="1400" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-post" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976d2;strokeColor=#0d47a1;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Post-processed — stage 3" vertex="1">
+          <mxGeometry height="50" width="230" x="1400" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-meta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f57f17;strokeColor=#e65100;fontSize=12;fontColor=#fff;arcSize=8;" value="📁  Metadata digitization — stage 4  ✅ escribe" vertex="1">
+          <mxGeometry height="50" width="230" x="1400" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="bd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1360" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="agente-ocr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f57f17;fillColor=#f57f17;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#bf360c;fontStyle=1;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="docservice" value="1️⃣ solicita proceso OCR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#7b1fa2;fillColor=#7b1fa2;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#4a148c;fontStyle=1;strokeWidth=2;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="procorder" value="2️⃣ solicita datos en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="765" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF8000;fillColor=#00897b;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#004d40;fontStyle=1;strokeWidth=2;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="docdir" value="3️⃣ solicitar PDFs de stage 2 (1 SAS por petición — N veces)">
+          <mxGeometry relative="1" x="0.6667" y="41" as="geometry">
+            <mxPoint x="-1" y="-10" as="offset" />
+            <Array as="points">
+              <mxPoint x="1130" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f9a825;fillColor=#f9a825;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#e65100;fontStyle=1;strokeWidth=2;dashed=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="docservice" value="4️⃣ SAS token descarga (stage 2)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="290" />
+              <mxPoint x="910" y="250" />
+              <mxPoint x="880" y="250" />
+              <mxPoint x="880" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-read" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f57f17;fillColor=#f57f17;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#bf360c;strokeWidth=2;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="blob-pre" value="lee PDFs de stage 2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#e53935;fillColor=#e53935;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#b71c1c;fontStyle=1;strokeWidth=2;entryX=-0.005;entryY=0.621;entryDx=0;entryDy=0;exitX=0.892;exitY=1.023;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" target="docdir" value="5️⃣ datos para guardar resultado OCR">
+          <mxGeometry relative="1" x="0.3333" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="802" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#43a047;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1b5e20;fontStyle=1;strokeWidth=2;dashed=1;" target="docservice" value="6️⃣ SAS token carga (stage 4)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="410" />
+              <mxPoint x="750" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-write" edge="1" parent="1" source="docdir" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#FF0000;fillColor=#f57f17;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#bf360c;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="blob-meta" value="escribe metadata OCR en stage 4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1195" y="390" />
+              <mxPoint x="1240" y="390" />
+              <mxPoint x="1240" y="580" />
+              <mxPoint x="1270" y="580" />
+              <mxPoint x="1270" y="583" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#5e35b1;fillColor=#5e35b1;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#311b92;fontStyle=1;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.01;entryY=0.388;entryDx=0;entryDy=0;entryPerimeter=0;" target="QPgd5v-tW-rj6LLVB9mP-1" value="7️⃣ datos para guardar en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="635" y="530" />
+              <mxPoint x="950" y="530" />
+              <mxPoint x="950" y="600" />
+              <mxPoint x="965" y="600" />
+              <mxPoint x="965" y="601" />
+            </Array>
+            <mxPoint x="950" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-bd" edge="1" parent="1" source="procorder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;" target="bd" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPgd5v-tW-rj6LLVB9mP-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C0099;strokeColor=#1b5e20;fontSize=12;fontColor=#fff;arcSize=10;shadow=1;" value="&lt;b&gt;API BS&lt;/b&gt;&lt;br&gt;Processing Order&lt;br&gt;Customer Credit Rating" vertex="1">
+          <mxGeometry height="80" width="230" x="965" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="0-48cnwF7jJuxh8I3cxp-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b&gt;GET /processing-orders/{customerOfferId}/correspondence-and-documents/retrieve?documentStage:2&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="560" x="840" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="0wZpUJC58Hg8n2B71KKY-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;POST /processing-orders/{customerOfferId}/correspondence-and-documents/initiate&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="370" x="720" y="660" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; Stage:4,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; style=&quot;forced-color-adjust: none;&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" link="&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(27, 94, 32); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;&amp;nbsp; documentDirectoryId:null,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; document:Solicitud credito.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; Stage:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;&amp;nbsp; userId:&quot;T09283&quot;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" id="0wZpUJC58Hg8n2B71KKY-2">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="180" x="910" y="680" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="0wZpUJC58Hg8n2B71KKY-3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#42a5f5;strokeColor=#1565c0;fontSize=13;fontColor=#fff;shadow=1;" value="🗃️&lt;br&gt;&lt;b&gt;BD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1270" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="0wZpUJC58Hg8n2B71KKY-4" edge="1" parent="1" source="QPgd5v-tW-rj6LLVB9mP-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#42a5f5;fillColor=#42a5f5;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#1565c0;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="0wZpUJC58Hg8n2B71KKY-3" value="persiste en BD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="648" />
+              <mxPoint x="1260" y="710" />
+              <mxPoint x="1325" y="710" />
+            </Array>
+            <mxPoint x="1250" y="695" as="sourcePoint" />
+            <mxPoint x="1415" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x00-KAWG67SjS97J_BG0-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;POST /document-directories/register?employeeId=T6172 — stage:4(GUARDA RESULTADO OCR)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="400" x="1150" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="x00-KAWG67SjS97J_BG0-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(27, 94, 32); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;GET /document-directories/{documentDirectoryId}/retrieve?creditEvaluationId=T6172&amp;amp;documentStage:2 (LEE STAGE 2)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="560" x="1150" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Dbkapxq0hpVR1YPQtLpr-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(69, 39, 160); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;POST /document-services/digitization-documents/{requestId}/execute&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="400" x="520" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="9MnHp4DEWwIp70cUlUaC-1" parent="1" style="whiteSpace=wrap;html=1;" value="NOTA:&amp;nbsp;&lt;div&gt;- Realiza el proceso de guardado de informacion dentro de blob?&lt;/div&gt;&lt;div&gt;- Como se guarda esa informacion del archivo?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1650" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="lm08XOPLrbX4A7uyrksX-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Salida de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; documentName: boleta5.pdf,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; totalPages: 2,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; pages: [&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;number: 1,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;content: SHOUGANG HIERRO 2040573 .......&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;...............................................&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; },&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: rgb(183, 28, 28);&quot;&gt;&lt;div style=&quot;color: rgb(27, 94, 32);&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; {&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;number: 2,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp;content: SHOUGANG HIERRO 2040573 .......&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;...............................................&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(183, 28, 28); background-color: transparent;&quot;&gt;&amp;nbsp; },&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="250" x="330" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WTBzFwYz_S6UKgGtYz9P-1" edge="1" parent="1" source="docservice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#f57f17;fillColor=#f57f17;flowAnimation=1;endArrow=block;endFill=1;fontSize=10;fontColor=#bf360c;fontStyle=1;strokeWidth=2;exitX=0.001;exitY=0.842;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="agente-ocr" value="respuesta OCR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="267" />
+              <mxPoint x="450" y="270" />
+              <mxPoint x="410" y="270" />
+              <mxPoint x="410" y="223" />
+            </Array>
+            <mxPoint x="510" y="240" as="sourcePoint" />
+            <mxPoint x="700" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Owh0P8QEwDVvM1ZE1Mwu-1" parent="1" style="text;html=1;strokeColor=none;fillColor=light-dark(#FFFFFF,#FFFFFF);align=center;fontSize=10;fontColor=#1b5e20;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Entrada de datos:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156)); background-color: transparent;&quot;&gt;Body: {&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; userId:&quot;0S76548&quot;,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; document:{&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; directoryId:1,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; name:creditoPyme.pdf,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#b71c1c&quot;&gt;&amp;nbsp; &lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;}&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(183, 28, 28), rgb(255, 156, 156));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="109" width="165" x="590" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
